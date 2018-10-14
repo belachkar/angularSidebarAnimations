@@ -3,8 +3,8 @@
   <li @fade *ngFor="let user of users$, let i = index" (click)="onclick(i)" >
     <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
     <ul>
-      <li @fade>{{ user.email }}</li>
-      <li @fade><a href="http://{{user.website}}">{{ user.website }}</a></li>
+      <li>{{ user.email }}</li>
+      <li><a href="http://{{user.website}}">{{ user.website }}</a></li>
     </ul>
   </li>
 </ul>
