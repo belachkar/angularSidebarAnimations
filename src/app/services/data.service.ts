@@ -15,11 +15,11 @@ export class DataService {
   getUsers() {
     return this.http.get<User[]>(`${this.url}/users`);
   }
-  getUser(id) {
-    return this.http.get<User>(`${this.url}/users/${id}`);
-  }
   getPosts() {
     return this.http.get<Post[]>(`${this.url}/posts`);
+  }
+  getUser(id) {
+    return this.http.get<User>(`${this.url}/users/${id}`);
   }
 
 }

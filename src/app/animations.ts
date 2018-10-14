@@ -12,17 +12,16 @@ export const anime = {
     ])
   ]),
   eclipse: trigger('eclipse', [
-    state('void', style({ opacity: 0 })),
+    state('void', style({ transform: 'translateX(-30px)', opacity: 0 })),
     transition(':enter', [
-      animate(0, style({ transform: 'translateX(-30px)', opacity: 1 })),
-      animate(200, style({ transform: 'translateX(20px)' })),
-      animate(100)
+      animate(100, style({ transform: 'translateX(20px)',  opacity: 1 })),
+      animate(50)
     ]),
     transition(':leave', [
       animate(100, style({ backgroundColor: '#FFAAA8' })),
       animate(400, style({ backgroundColor: '#FF8888' })),
       animate(100, style({ transform: 'translateX(-20px)' })),
-      animate(100, style({ transform: 'translateX(400px)', backgroundColor: '#FFAAA8' }))
+      animate(100, style({ transform: 'translateX(600px)', backgroundColor: '#FFAAA8' }))
     ])
   ])
 };
