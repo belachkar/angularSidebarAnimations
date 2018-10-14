@@ -1,6 +1,6 @@
 <h1>Posts</h1>
 <ul>
-  <li *ngFor="let post of posts$">
+  <li @eclipse *ngFor="let post of posts$, let i = index" (click)="onclick(i)">
     <a routerLink="">{{ post.title }}</a>
     <p>{{ post.body }}</p>
   </li>
